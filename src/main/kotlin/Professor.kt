@@ -1,8 +1,18 @@
-class Professor() : Cadastro(nome="",sobrenome="",id=0 ){
+open class Professor(val nome: String, val sobrenome: String, val idProfessor: Int) {
 
-    val mapaDeProfessor = mutableMapOf<Int, String>()
+    val mapaDeProfessores = mutableMapOf<Int, List<Professor>>()
+    private var contador = 0
 
-    override fun adicionarListaNoMapa() {
-        TODO("Not yet implemented")
+    fun adicionarListaNoMapaDeProfessores(lista: List<Professor>) {
+        mapaDeProfessores[contador] = lista
+        contador++
+    }
+
+    fun mostrarListaDeProfessores(){
+        for(i in 0..mapaDeProfessores.keys.size){
+            var temporario = mapaDeProfessores[i]
+            temporario?.forEach { print("Código do Professor: ${it.idProfessor} | " +
+                    "Nome do Professor: ${it.nome} ${it.sobrenome}\n") }
+        }
     }
 }
