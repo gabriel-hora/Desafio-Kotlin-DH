@@ -1,4 +1,11 @@
-class Curso(val nome: String, val idCurso: Int) {
+class Curso(
+    val nome: String,
+    val idCurso: Int,
+    val professorTitular: ProfessorTitular,
+    val professorAdjunto: ProfessorAdjunto,
+    val qualtidadeMaximaDeAlunos: Int,
+    val lista: List<Aluno>
+) {
 
     val mapaDeCursos = mutableMapOf<Int, List<Curso>>()
     private var contador = 0
@@ -14,7 +21,8 @@ class Curso(val nome: String, val idCurso: Int) {
             temporario?.forEach {
                 print(
                     "Código do Curso: ${it.idCurso} | " +
-                            "Nome do Curso: ${it.nome} \n"
+                            "Nome do Curso: ${it.nome} | " +
+                            "Professor: ${it.professorTitular.nome} ${it.professorTitular.sobrenome}\n"
                 )
             }
         }
