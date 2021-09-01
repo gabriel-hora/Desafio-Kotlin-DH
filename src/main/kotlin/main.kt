@@ -13,14 +13,14 @@ fun main() {
     val curso = Curso("", 0)
 
     //Instâncias de Professores
-    val professorRomario = Professor("Romário", "Indiano", 1)
-    val professorJonatas = Professor("Jonatas", "Araujo", 2)
-    val professor = Professor("", "", 0)
+    val professorRonaldo = ProfessorTitular("Ronaldo", "De Lima", 1, "Matemático")
+    val professorSamanta = ProfessorAdjunto("Samanta", "Araujo", 2, 24)
 
     //Listas
     val listaDeAlunos = listOf(alunoGabriel, alunoPedro, alunoRodrigo)
     val listaDeCurso = listOf(cursoMatematica, cursoBiologia, cursoPortugues)
-    val listaDeProfessores = listOf(professorJonatas, professorRomario)
+    val listaDeProfessores = listOf(professorRonaldo, professorSamanta)
+
 
 
     aluno.adicionarListaNoMapaDeAlunos(listaDeAlunos)
@@ -29,7 +29,6 @@ fun main() {
     curso.adicionarListaNoMapaDeCursos(listaDeCurso)
     curso.mostrarListaDeCursos()
     println("")
-    professor.adicionarListaNoMapaDeProfessores(listaDeProfessores)
-    professor.mostrarListaDeProfessores()
-
+    professorRonaldo.adicionarListaNoMapaDeProfessores(listaDeProfessores)
+    professorRonaldo.mostrarListaDeProfessores()
 }

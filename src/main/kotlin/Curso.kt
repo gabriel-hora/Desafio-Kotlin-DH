@@ -8,11 +8,15 @@ class Curso(val nome: String, val idCurso: Int) {
         contador++
     }
 
-    fun mostrarListaDeCursos(){
-        for(i in 0..mapaDeCursos.keys.size){
+    fun mostrarListaDeCursos() {
+        for (i in 0..mapaDeCursos.keys.size) {
             var temporario = mapaDeCursos[i]
-            temporario?.forEach { print("Código do Curso: ${it.idCurso} | " +
-                    "Nome do Curso: ${it.nome} \n") }
+            temporario?.forEach {
+                print(
+                    "Código do Curso: ${it.idCurso} | " +
+                            "Nome do Curso: ${it.nome} \n"
+                )
+            }
         }
     }
 }

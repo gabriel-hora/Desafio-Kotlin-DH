@@ -8,11 +8,15 @@ class Aluno(val nome: String, val sobrenome: String, val idAluno: Int) {
         contador++
     }
 
-    fun mostrarListaDeAlunos(){
-        for(i in 0..mapaDeAlunos.keys.size){
+    fun mostrarListaDeAlunos() {
+        for (i in 0..mapaDeAlunos.keys.size) {
             var temporario = mapaDeAlunos[i]
-            temporario?.forEach { print("Código do Aluno: ${it.idAluno} | " +
-                    "Nome do Aluno: ${it.nome} ${it.sobrenome}\n") }
+            temporario?.forEach {
+                print(
+                    "Código do Aluno: ${it.idAluno} | " +
+                            "Nome do Aluno: ${it.nome} ${it.sobrenome}\n"
+                )
+            }
         }
     }
 }
