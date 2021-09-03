@@ -17,6 +17,7 @@ class Curso(
 
     fun mostrarListaDeCursos() {
         for (i in 0..mapaDeCursos.keys.size) {
+
             var temporario = mapaDeCursos[i]
             temporario?.forEach {
                 print(

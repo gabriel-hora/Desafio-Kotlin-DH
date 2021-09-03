@@ -22,7 +22,7 @@ fun main() {
     val cursoBiologia = Curso("Biologia", 3,professorPatricia,professorSamanta,40, listaDeAlunos)
     val listaDeCurso = listOf(cursoMatematica, cursoBiologia, cursoPortugues)
 
-
+    val matriculaAluno1 = Matricula()
 
     aluno.adicionarListaNoMapaDeAlunos(listaDeAlunos)
     aluno.mostrarListaDeAlunos()
@@ -32,5 +32,7 @@ fun main() {
     println("")
     cursoMatematica.adicionarListaNoMapaDeCursos(listaDeCurso)
     cursoMatematica.mostrarListaDeCursos()
-
+    println("")
+    matriculaAluno1.matricular(cursoBiologia, listaDeAlunos)
+    matriculaAluno1.MostrarMatriculados(cursoMatematica)
 }
