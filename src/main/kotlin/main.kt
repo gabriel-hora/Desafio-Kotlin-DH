@@ -34,5 +34,4 @@ fun main() {
     cursoMatematica.mostrarListaDeCursos()
     println("")
     matriculaAluno1.matricular(cursoBiologia, listaDeAlunos)
-    matriculaAluno1.MostrarMatriculados(cursoMatematica)
 }

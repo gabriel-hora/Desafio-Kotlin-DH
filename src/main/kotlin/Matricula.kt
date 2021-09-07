@@ -1,20 +1,20 @@
-import java.util.Date
+import java.util.Calendar
 
 class Matricula() {
 
     var mapaDeMatriculados = mutableMapOf<Int, List<Aluno>>()
-    var data = Date()
+    var data = Calendar.getInstance()
     var contador = 0
 
     fun matricular(curso: Curso, aluno: List<Aluno>) {
         mapaDeMatriculados[contador] = aluno
+        println("Aluno Matriulado com Sucesso em ${data.get(Calendar.DATE)}/${data.get(Calendar.MONTH)}/${data.get(Calendar.YEAR)}")
         contador++
-        println("Matriculado com Sucesso")
     }
 
     fun MostrarMatriculados(curso: Curso) {
         for (i in 0..mapaDeMatriculados.keys.size) {
-            var temp =  mapaDeMatriculados[i]
+            var temp = mapaDeMatriculados[i]
             println("Curso: ${curso.nome} | Matriculados: ")
             temp?.forEach {
                 println(
