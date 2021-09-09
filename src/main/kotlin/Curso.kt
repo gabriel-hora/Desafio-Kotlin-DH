@@ -1,13 +1,13 @@
 class Curso(
     val nome: String,
     val idCurso: Int,
-    val professorTitular: ProfessorTitular,
-    val professorAdjunto: ProfessorAdjunto,
-    val qualtidadeMaximaDeAlunos: Int,
-    val lista: List<Aluno>
+    val professorTitular: ProfessorTitular?,
+    val professorAdjunto: ProfessorAdjunto?,
+    val quantidadeMaximaDeAlunos: Int,
+    var listaDeAlunosMatriculados: MutableList<Aluno> = mutableListOf()
 ) {
 
-    val mapaDeCursos = mutableMapOf<Int, List<Curso>>()
+    var mapaDeCursos = mutableMapOf<Int, List<Curso>>()
     private var contador = 0
 
     fun adicionarListaNoMapaDeCursos(lista: List<Curso>) {
@@ -27,5 +27,19 @@ class Curso(
                 )
             }
         }
+    }
+
+    fun adicionarUmAluno(umAluno: Aluno): Boolean {
+        return if (listaDeAlunosMatriculados.size > 10 || listaDeAlunosMatriculados.size < 0) {
+            println("Curso com a capacidade maxima de alunos")
+            false
+        } else {
+            listaDeAlunosMatriculados.add(umAluno)
+            return true
+        }
+    }
+
+    fun excluirAluno(umAluno: Aluno) {
+        listaDeAlunosMatriculados.remove(umAluno)
     }
 }

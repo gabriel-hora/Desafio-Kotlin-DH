@@ -1,11 +1,12 @@
 class Aluno(val nome: String, val sobrenome: String, val idAluno: Int) {
 
+    var listaDeAlunos = mutableListOf<Aluno>()
     var mapaDeAlunos = mutableMapOf<Int, List<Aluno>>()
-    private var contador = 0
+    private var contadorMapa = 0
 
     fun adicionarListaNoMapaDeAlunos(lista: List<Aluno>) {
-        mapaDeAlunos[contador] = lista
-        contador++
+        mapaDeAlunos[contadorMapa] = lista
+        contadorMapa++
     }
 
     fun mostrarListaDeAlunos() {
