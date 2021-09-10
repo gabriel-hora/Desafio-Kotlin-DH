@@ -1,41 +1,31 @@
 fun main() {
 
-    //Instâncias de Alunos
-    val alunoGabriel = Aluno("Gabriel", "Hora", 1)
-    val alunoPedro = Aluno("Pedro", "Almeida", 2)
-    val alunoRodrigo = Aluno("Rodrigo", "Gonçalves", 3)
-    val alunoMaria = Aluno("Maria", "Hernandez", 4)
-    val alunoJose = Aluno("Jose", "Gaspar", 5)
-    val aluno = Aluno("", "", 0)
-    val listaDeAlunos1 = listOf(alunoGabriel, alunoPedro)
-    val listaDeAlunos2 = listOf(alunoMaria, alunoJose, alunoRodrigo)
+    val instancia = DigitalHouseManager()
 
+    instancia.registrarProfessorTitular("Romário","Lima",1,"Developer Android")
+    instancia.registrarProfessorTitular("Jonatas","Oliveira",2,"Developer C++")
 
+    instancia.registrarProfessorAdjunto("Jorge","Alencar",3,0)
+    instancia.registrarProfessorAdjunto("Roberto","da Silva",4,0)
 
-    //Instâncias de Professores
-    val professorRonaldo = ProfessorTitular("Ronaldo", "de Lima", 1, "Matemático")
-    val professorSamanta = ProfessorAdjunto("Samanta", "Araujo", 2, 24)
-    val professorRodrigo = ProfessorTitular("Rodrigo", "Bossini", 3, "Português")
-    val professorPatricia = ProfessorTitular("Patricia", "de Oliveira", 4,"Biologia")
-    val listaDeProfessores = listOf(professorRonaldo, professorSamanta,professorRodrigo,professorPatricia)
+    instancia.registrarCurso("Full Stack", 20001,3)
+    instancia.registrarCurso("Android", 20002,2)
 
-    //Instâncias de Cursos
-    val cursoMatematica = Curso("Matemática", 1,professorRonaldo,professorSamanta,40)
-    val cursoPortugues = Curso("Português", 2,professorRodrigo,professorSamanta,40)
-    val cursoBiologia = Curso("Biologia", 3,professorPatricia,professorSamanta,40)
-    val listaDeCurso = listOf(cursoMatematica, cursoBiologia, cursoPortugues)
+    instancia.matricularAluno("Gabriel","Hora",1)
+    instancia.matricularAluno("Pedro","Alencar",2)
+    instancia.matricularAluno("Henrique","Pereira",3)
+    instancia.matricularAluno("Ricardo","Gomes",4)
+    instancia.matricularAluno("Rogerio","Padavini", 5)
 
-
-
-    aluno.adicionarListaNoMapaDeAlunos(listaDeAlunos1)
-    aluno.mostrarListaDeAlunos()
+    instancia.matricularAluno(1,20001)
+    instancia.matricularAluno(2,20001)
+    instancia.matricularAluno(3,20001)
     println("")
-    professorRonaldo.adicionarListaNoMapaDeProfessores(listaDeProfessores)
-    professorRonaldo.mostrarListaDeProfessores()
-    println("")
-    cursoMatematica.adicionarListaNoMapaDeCursos(listaDeCurso)
-    cursoMatematica.mostrarListaDeCursos()
-    println("")
+    instancia.matricularAluno(3,20002)
+    instancia.matricularAluno(4,20002)
+    instancia.matricularAluno(5,20002)
 
-    var teste = DigitalHouseManager()
+
+
+
 }

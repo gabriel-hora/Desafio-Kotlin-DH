@@ -60,13 +60,13 @@ class DigitalHouseManager {
     }
 
     fun matricularAluno(codigoAluno: Int, codigoCurso: Int) {
-        for (curso in listaDeCursos) {
-            if (curso.idCurso == codigoCurso) {
+        for (i in listaDeCursos) {
+            if (i.idCurso == codigoCurso) {
                 for (aluno in listaDeAlunos) {
                     if (aluno.idAluno == codigoAluno) {
-                        if (curso.adicionarUmAluno(aluno)) {
-                                listaDeMatriculados.add(Matricula(aluno, curso))
-                                println("Aluno matriculado com sucesso")
+                        if (i.adicionarUmAluno(aluno)) {
+                                listaDeMatriculados.add(Matricula(aluno, i))
+                                println("Aluno ${aluno.nome} ${aluno.sobrenome} foi matriculado com sucesso no curso ${i.nome}")
                         } else {
                             println("Não tem mais vagas para esse curso")
                         }

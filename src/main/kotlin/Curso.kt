@@ -30,12 +30,12 @@ class Curso(
     }
 
     fun adicionarUmAluno(umAluno: Aluno): Boolean {
-        return if (listaDeAlunosMatriculados.size > 10 || listaDeAlunosMatriculados.size < 0) {
-            println("Curso com a capacidade maxima de alunos")
+        return if(listaDeAlunosMatriculados.size > quantidadeMaximaDeAlunos){
+            println("Não exite mais vagas para esse curso")
             false
-        } else {
+        }else{
             listaDeAlunosMatriculados.add(umAluno)
-            return true
+            true
         }
     }
 
