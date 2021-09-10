@@ -1,6 +1,6 @@
 import java.util.Calendar
 
-class Matricula() {
+class Matricula(aluno: Aluno, curso: Curso) {
 
     var mapaDeMatriculados = mutableMapOf<Curso, List<Aluno>>()
     var data: Calendar = Calendar.getInstance()

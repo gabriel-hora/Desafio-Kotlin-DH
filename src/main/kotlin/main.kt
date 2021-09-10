@@ -25,7 +25,7 @@ fun main() {
     val cursoBiologia = Curso("Biologia", 3,professorPatricia,professorSamanta,40)
     val listaDeCurso = listOf(cursoMatematica, cursoBiologia, cursoPortugues)
 
-    val matriculaAluno1 = Matricula()
+
 
     aluno.adicionarListaNoMapaDeAlunos(listaDeAlunos1)
     aluno.mostrarListaDeAlunos()
@@ -36,10 +36,6 @@ fun main() {
     cursoMatematica.adicionarListaNoMapaDeCursos(listaDeCurso)
     cursoMatematica.mostrarListaDeCursos()
     println("")
-    matriculaAluno1.matricular(cursoBiologia, listaDeAlunos1)
-    matriculaAluno1.MostrarMatriculados(cursoBiologia)
-    println("")
-    matriculaAluno1.matricular(cursoMatematica, listaDeAlunos2)
-    matriculaAluno1.MostrarMatriculados(cursoMatematica)
-    println("")
+
+    var teste = DigitalHouseManager()
 }

@@ -23,7 +23,7 @@ class Curso(
                 print(
                     "Código do Curso: ${it.idCurso} | " +
                             "Nome do Curso: ${it.nome} | " +
-                            "Professor: ${it.professorTitular.nome} ${it.professorTitular.sobrenome}\n"
+                            "Professor: ${it.professorTitular!!.nome} ${it.professorTitular.sobrenome}\n"
                 )
             }
         }
