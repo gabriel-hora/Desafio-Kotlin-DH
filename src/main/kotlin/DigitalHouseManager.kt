@@ -5,7 +5,6 @@ class DigitalHouseManager {
     var listaDeProfessores: MutableList<Professor> = mutableListOf()
     var listaDeCursos: MutableList<Curso> = mutableListOf()
     var listaDeMatriculados: MutableList<Matricula> = mutableListOf()
-    var contador = 0
 
     fun registrarCurso(nome: String, codigoCurso: Int, quantidadeMaximaDeAlunos: Int) {
 
